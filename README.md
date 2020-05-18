@@ -1,24 +1,40 @@
-# README
+# WAS - Web API Sharing platform
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+It found strange I did not find a website that registers web APIs, so I'm trying to make one. I also started to work on `WAS` for learning purposes.
 
-Things you may want to cover:
+`WAS` is currently deployed with [heroku](https://www.heroku.com/) at [https://web-api-sharing.herokuapp.com/](https://web-api-sharing.herokuapp.com/)
 
-* Ruby version
+## Summary
 
-* System dependencies
+- [Getting started](#getting-started)
+- [Contributors](#contributors)
 
-* Configuration
+## Getting started
 
-* Database creation
+To get started with the app, cl@ext:yzhang.markdown-all-in-one tableone the repo and then install the needed gems:
 
-* Database initialization
+```console
+bundle install --without production
+```
 
-* How to run the test suite
+Next, migrate the database:
 
-* Services (job queues, cache servers, search engines, etc.)
+```console
+rails db:migrate
+```
 
-* Deployment instructions
+Finally, run the test suite to verify that everything is working correctly:
 
-* ...
+```console
+rails test
+```
+
+If the test suite passes, you'll be ready to run the app in a local server:
+
+```console
+rails server
+```
+
+## Contributors
+
+- [Baptiste Chocot](https://github.com/Chocorean)

@@ -1,15 +1,110 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
+ * Stylesheet for common header and footer.
  *
  *= require_tree .
  *= require_self
  */
+
+ :root {
+  --green: rgb(33, 226, 33);
+  --trans-lighter-green: rgba(76, 207, 76, 0.25);
+  --light-grey: rgb(219, 219, 219);
+  --average-grey: #909090;
+  --dark-grey: #221e1e;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  background-color: #eeeeee;
+}
+
+header {
+  background-color: var(--dark-grey);
+}
+
+header a {
+  color: white;
+}
+
+header a:hover {
+  color: var(--green);
+}
+
+header svg {
+  stroke: var(--green);
+}
+
+header svg > text {
+  fill: var(--green);
+}
+
+header svg:hover {
+  stroke: white;
+}
+
+header svg > text:hover {
+  fill: white;
+}
+
+#search-input {
+  background-color: #303030;
+  color: white;
+}
+
+#search-input:hover {
+  border-color: var(--green);
+}
+
+#search-input:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 .2rem var(--trans-lighter-green);
+}
+
+header .btn {
+  color: white;
+}
+
+header .hdr-btn-link:hover {
+  color: var(--green);
+}
+
+header .hdr-btn {
+  border-color: white;
+}
+
+header .hdr-btn:hover {
+  color: var(--green);
+  border-color: var(--green);
+}
+
+#body {
+  padding-bottom: 1rem;
+}
+
+footer {
+  color: var(--average-grey);
+  font-size: .85rem;
+  border-top: 1px solid var(--light-grey);
+  padding-top: 1rem;
+}
+
+footer .col-md-6 > * {
+  padding-top: .75rem;
+  padding-left: 1.25rem;
+}
+
+footer svg {
+  stroke: var(--average-grey);
+}
+
+footer svg > text {
+  fill: var(--average-grey);
+}
+
+footer a {
+  color: var(--average-grey);
+}
+
+footer a:hover {
+  color: var(--dark-grey);
+}
